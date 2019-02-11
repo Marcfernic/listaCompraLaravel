@@ -7,7 +7,7 @@
         <div class="col-sm-4">
 
             <a href="{{ url('/productos/show/' . $producto->id ) }}">
-                <img src="https://picsum.photos/200/300/?random" style="height:200px"/>
+                <img src="{{ $producto->imagen }}" style="height:200px"/>
             </a>
 
         </div>

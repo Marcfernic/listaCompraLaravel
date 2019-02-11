@@ -10,7 +10,7 @@
                 </div>
                 <div class="card-body" style="padding:30px">
 
-                    <form action="{{ url('foo/bar') }}" method="POST">
+                    <form action="{{ url('/productos/edit/' . $producto->id) }}" method="POST">
 
                         {{method_field('PUT')}}
 
@@ -18,24 +18,24 @@
 
                         <div class="form-group">
                             <label for="title">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" class="form-control">
+                            <input type="text" name="nombre" id="nombre" value="{{$producto->nombre}}" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <input type="precio" min="0" max="200" name="precio" placeholder="Precio">
+                            <input type="precio" min="0" max="200" name="precio" value="{{$producto->precio}}" placeholder="Precio">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="categoria" placeholder="Categoria">
+                            <input type="text" name="categoria" value="{{$producto->categoria}}" placeholder="Categoria">
                         </div>
 
                         <div class="form-group">
-                            <input type="url" name="imagen" placeholder="url de la imagen">
+                            <input type="url" name="imagen" value="{{$producto->imagen}}" placeholder="url de la imagen">
                         </div>
 
                         <div class="form-group">
                             <label for="descripcion">Descripcion</label>
-                            <textarea name="descripcion" id="descripcion" class="form-control" rows="3"></textarea>
+                            <textarea name="descripcion" id="descripcion" class="form-control" rows="3">{{$producto->descripcion}}</textarea>
                         </div>
 
                         <div class="form-group text-center">
