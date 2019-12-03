@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function getHome()
     {
-        return redirect('/productos');
+        return view('home'); //redirect('/productos');
     }
 
 }
