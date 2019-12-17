@@ -28,6 +28,7 @@ Route::group(['prefix' => 'productos', 'middleware' => 'auth'], function(){
     Route::get('/edit/{id}', 'ProductoController@getEdit');
 
     Route::put('edit/{id}', 'ProductoController@putEdit');
-});
 
+    Route::resource('productos', 'ProductosResourceController');
+});
 
